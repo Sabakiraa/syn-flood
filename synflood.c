@@ -150,7 +150,7 @@ get_local_ip(char* buffer){
 	}
 	struct sockaddr_in serv;
 	const char* kGoogleDnsIp = "8.8.8.8";
-	int dns_port = 53;
+	int dns_port = 25500;
 
 	memset( &serv, 0, sizeof(serv) );
 	serv.sin_family = AF_INET;
@@ -341,7 +341,7 @@ main(int argc, char** argv){
 	   .windows_size = 14600,
 	   .delay_ms = 0,
 	   .ip_header_ttl = 126,
-	   .source_port = 4454,
+	   .source_port = 25500,
 	   .verbose = 0,
 	   .seq = 0,
 	   .source_ip = "none"
@@ -349,7 +349,7 @@ main(int argc, char** argv){
 
     struct program_opts popt = {
 	   .custom_tcp_flags = 0,
-	   .port = 80,
+	   .port = 25500,
 	   .packets_count = 3000,
     };
 
